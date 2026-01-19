@@ -1,14 +1,16 @@
 //test
-import { test } from '@playwright/test';
-import { Povestidesucces } from '../pages/Povestidesucces.js';
+const { test } = require('@playwright/test');
+const { Povestidesucces } = require('../pages/Povestidesucces');
 
-test('Pagina Povesti de succes se deschide corect', async ({ page }) => {
-  const povestidesucces = new Povestidesucces(page);
-
-  await povestidesucces.goto();
-  await povestidesucces.navigateFromMenu(); 
-  await povestidesucces.isLoaded();
-  await povestidesucces.checkTitle();
-
+test('Navigare către Povești de succes', async ({ page }) => {
+  const povesti = new Povestidesucces(page);
+  
+  await povesti.gotoPovestidesucces();
+  await povesti.openHamburgerMenu();
+  await povesti.clickPovestiDinSubmeniu();
+  await povesti.isLoaded();
+  await povesti.checkTitle();
+  
+  await page.waitForTimeout(5000);
+  
 });
-
