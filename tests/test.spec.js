@@ -1,3 +1,5 @@
+// modificare de test facuta de Adela
+
 import { test, expect } from '@playwright/test';
 import { MainPage } from '../pages/main-page.js';
 

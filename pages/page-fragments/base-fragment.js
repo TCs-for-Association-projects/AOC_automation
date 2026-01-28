@@ -1,3 +1,5 @@
+// modificare de test facuta de Adela in pages
+
 import ViewportUtils from '../../utils/viewport-detection.js';
 
 
